@@ -1,0 +1,69 @@
+﻿@model ContactPro.Models.Contact
+
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contact</h4>
+    <hr />
+    <div class="row">
+        <div class="col-sm-12 text-bold">
+            @Html.DisplayNameFor(model => model.Customer.CompanyName)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            @Html.DisplayFor(model => model.Customer.ID)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 text-bold">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </div>
+        <div class="col-sm-3 text-bold">
+            @Html.DisplayNameFor(model => model.LastName)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            @Html.DisplayFor(model => model.FirstName)
+        </div>
+        <div class="col-sm-3">
+            @Html.DisplayFor(Model => Model.FirstName)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 text-bold">
+            @Html.DisplayNameFor(model => model.DirectLine)
+        </div>
+        <div class="col-sm-3 text-bold">
+            @Html.DisplayNameFor(Model => Model.Mobile)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            @Html.DisplayFor(model => model.DirectLine)
+        </div>
+        <div class="col-sm-3">
+            @Html.DisplayFor(Model => Model.Mobile)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 text-bold">
+            @Html.DisplayNameFor(model => model.Email)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            @Html.DisplayFor(model => model.Email)
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

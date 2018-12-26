@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ContactPro.Models.Contact>
+
+@{
+    ViewBag.Title = "Contacts ";
+}
+<br />
+
+<p class="title-area text-center"><span class="custom-float-left">@ViewBag.Title</span>@Html.Partial("_CreateNewButtonPartial")</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-striped table-sm">
+        <tr>
+            <th class="table-header text"><span>@Html.DisplayNameFor(model => model.Customer.CompanyName)</span></th>
+            <th class="table-header text"><span>@Html.DisplayNameFor(model => model.FullName)</span></th>
+            <th class="table-header text d-none d-lg-table-cell"><span>@Html.DisplayNameFor(model => model.JobTitle)</span></th>
+            <th class="table-header text"><span>@Html.DisplayNameFor(model => model.Customer.Phone)</span></th>
+            <th class="table-header text"><span>@Html.DisplayNameFor(model => model.Mobile)</span></th>
+            <th class="table-header text"><span>Action</span></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            if (item.Status == "A")
+            {
+                <tr ondblclick="location.href = '@Url.Action("Edit", "Contacts", new { id = item.ID })'">
+                    <td class="text"><span>@Html.DisplayFor(modelItem => item.Customer.CompanyName)</span></td>
+                    <td class="text"><span>@Html.DisplayFor(modelItem => item.FullName)</span></td>
+                    <td class="text d-none d-lg-table-cell"><span>@Html.DisplayFor(modelItem => item.JobTitle)</span></td>
+                    <td class="text"><span>@Html.DisplayFor(modelItem => item.Customer.Phone)</span></td>
+                    <td class="text"><span>@Html.DisplayFor(modelItem => item.Mobile)</span></td>
+                    <td class="text">
+                        <span>
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                        </span>
+                    </td>
+                </tr>
+            }
+        }
+
+    </table>
+</div>

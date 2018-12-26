@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ContactPro.Models.Customer>
+
+@{
+    ViewBag.Title = "Customers";
+}
+<br />
+
+<p class="title-area text-center"><span class="custom-float-left">@ViewBag.Title</span>@Html.Partial("_CreateNewButtonPartial")</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-sm table-striped">
+        <tr>
+            <th class="table-header text"><span>@Html.DisplayNameFor(model => model.CompanyName)</span></th>
+            <th class="table-header text"><span>@Html.DisplayNameFor(model => model.Phone)</span></th>
+            <th class="table-header text"><span>@Html.DisplayNameFor(model => model.XceleratorURL)</span></th>
+            <th class="table-header text"><span>@Html.DisplayNameFor(model => model.State)</span></th>
+            <th class="table-header text"><span>@Html.DisplayNameFor(model => model.Country)</span></th>
+            <th class="table-header text"><span>Action</span></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            if (item.Status == "A")
+            {
+                <tr ondblclick="location.href = '@Url.Action("Edit", "Customers", new { id = item.ID })'">
+                    <td class="text"><span>@Html.DisplayFor(modelItem => item.CompanyName)</span></td>
+                    <td class="text"><span>@Html.DisplayFor(modelItem => item.Phone)</span></td>
+                    <td class="text"><span>@Html.DisplayFor(modelItem => item.XceleratorURL)</span></td>
+                    <td class="text"><span>@Html.DisplayFor(modelItem => item.State)</span></td>
+                    <td class="text"><span>@Html.DisplayFor(modelItem => item.Country)</span></td>
+                    <td class="text">
+                        <span>
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                        </span>
+                    </td>
+                </tr>
+            }
+        }
+
+    </table>
+</div>

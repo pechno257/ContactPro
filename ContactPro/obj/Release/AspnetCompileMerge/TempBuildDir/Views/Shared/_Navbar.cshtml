@@ -1,0 +1,21 @@
+﻿<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="~/"><span class="logo logo-part1">Contact</span><span class="logo logo-part2">Pro</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-link">@Html.ActionLink("Home", "Index", "Home")</li>
+                <li class="nav-link">@Html.ActionLink("About Us", "About", "Home")</li>
+                <li class="nav-link">@Html.ActionLink("Customer", "Index", "Customers")</li>
+                <li class="nav-link">@Html.ActionLink("Contact", "Index", "Contacts")</li>
+            </ul>
+            <span class="form-inline my-2 my-lg-0">
+                @Html.Partial("_LoginPartial")
+            </span>
+        </div>
+    </div>
+</nav>
+
