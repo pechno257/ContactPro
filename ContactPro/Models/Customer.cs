@@ -64,6 +64,12 @@ namespace ContactPro.Models
 
         public DateTime DateModified { get; set; } = DateTime.Now;
 
+        [Required(ErrorMessage = "Please select an option.")]
+        [Display(Name = "Hosted?")]
+        public string IsHosted { get; set; }
+
+        [Display(Name = "Hosted Server")]
+        public string HostedServer { get; set; }
     }
 }
 

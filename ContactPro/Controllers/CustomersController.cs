@@ -46,7 +46,7 @@ namespace ContactPro.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,CompanyName,Phone,Fax,XceleratorURL,Street,City,State,Zip,Country,MailStreet,MailCity,MailState,MailZip,MailCountry")] Customer customer)
+        public ActionResult Create([Bind(Include = "ID,CompanyName,Phone,Fax,XceleratorURL,Street,City,State,Zip,Country,MailStreet,MailCity,MailState,MailZip,MailCountry,IsHosted,HostedServer")] Customer customer)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace ContactPro.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,CompanyName,Phone,Fax,XceleratorURL,Street,City,State,Zip,Country,MailStreet,MailCity,MailState,MailZip,MailCountry")] Customer customer)
+        public ActionResult Edit([Bind(Include = "ID,CompanyName,Phone,Fax,XceleratorURL,Street,City,State,Zip,Country,MailStreet,MailCity,MailState,MailZip,MailCountry,IsHosted,HostedServer")] Customer customer)
         {
             if (ModelState.IsValid)
             {

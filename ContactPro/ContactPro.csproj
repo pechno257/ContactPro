@@ -208,6 +208,10 @@
     <Compile Include="Migrations\App\201812100303370_InitialCreate.Designer.cs">
       <DependentUpon>201812100303370_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\App\201812260632025_AddedHostedProps.cs" />
+    <Compile Include="Migrations\App\201812260632025_AddedHostedProps.Designer.cs">
+      <DependentUpon>201812260632025_AddedHostedProps.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\App\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Contact.cs" />
@@ -217,6 +221,8 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Utils\HostedServerList.cs" />
+    <Compile Include="Utils\IsHosted.cs" />
     <Compile Include="Utils\CountryList.cs" />
     <Compile Include="Utils\StateList.cs" />
   </ItemGroup>
@@ -364,6 +370,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\App\201812100303370_InitialCreate.resx">
       <DependentUpon>201812100303370_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\App\201812260632025_AddedHostedProps.resx">
+      <DependentUpon>201812260632025_AddedHostedProps.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

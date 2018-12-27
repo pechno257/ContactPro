@@ -308,3 +308,4 @@ C:\Users\jean\source\repos\ContactPro\ContactPro\obj\Debug\ContactPro.Migrations
 C:\Users\jean\source\repos\ContactPro\ContactPro\obj\Debug\ContactPro.csproj.GenerateResource.cache
 D:\projects\source\repos\ContactPro\ContactPro\obj\Debug\ContactPro.Migrations.App.InitialCreate.resources
 D:\projects\source\repos\ContactPro\ContactPro\obj\Debug\ContactPro.csproj.GenerateResource.cache
+D:\projects\source\repos\ContactPro\ContactPro\obj\Debug\ContactPro.Migrations.App.AddedHostedProps.resources

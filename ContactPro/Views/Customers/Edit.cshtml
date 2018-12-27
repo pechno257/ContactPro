@@ -133,6 +133,31 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4">
+                            @Html.LabelFor(model => model.IsHosted, htmlAttributes: new { @class = "control-label" })
+                        </div>
+                        <div class="col-lg-9 col-md-8">
+                            @Html.DropDownListFor(model => model.IsHosted, ContactPro.Utils.IsHosted.GetIsHosted(), "", new { @class = "form-control form-control-xshort form-control-sm", @id = "dropdown1" })
+                            @Html.ValidationMessageFor(model => model.IsHosted, "", new { @class = "text-danger" })
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4">
+                            @Html.LabelFor(model => model.HostedServer, htmlAttributes: new { @class = "control-label required-field text-nowrap", @id = "dropdown2label" })
+                        </div>
+                        <div class="col-lg-9 col-md-8">
+                            @Html.DropDownListFor(model => model.HostedServer, ContactPro.Utils.HostedServerList.GetHostedServerList(), "", new { @class = "form-control form-control-fluid form-control-sm", @id = "dropdown2" })
+                            @Html.ValidationMessageFor(model => model.HostedServer, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="col-md-5 offset-md-2">
@@ -208,4 +233,32 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $(document).ready(function () {
+
+            if ($("#dropdown1").val() == "Y") {
+                $("#dropdown2").show();
+                $("#dropdown2label").show();
+            }
+            else {
+                $("#dropdown2").hide();
+                $("#dropdown2label").hide();
+            }
+
+
+            $("#dropdown1").change(function () {
+
+                if ($(this).val() == "Y") {
+                    $("#dropdown2").show();
+                    $("#dropdown2").addClass("required");
+                    $("#dropdown2label").show();
+                }
+                else {
+                    $("#dropdown2").hide();
+                    $("#dropdown2 option[value='']").attr('selected', true)
+                    $("#dropdown2label").hide();
+                }
+            });
+        });
+    </script>
 }

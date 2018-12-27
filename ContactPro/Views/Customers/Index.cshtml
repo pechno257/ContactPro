@@ -12,9 +12,9 @@
         <tr>
             <th class="table-header text"><span>@Html.DisplayNameFor(model => model.CompanyName)</span></th>
             <th class="table-header text"><span>@Html.DisplayNameFor(model => model.Phone)</span></th>
-            <th class="table-header text"><span>@Html.DisplayNameFor(model => model.XceleratorURL)</span></th>
             <th class="table-header text"><span>@Html.DisplayNameFor(model => model.State)</span></th>
             <th class="table-header text"><span>@Html.DisplayNameFor(model => model.Country)</span></th>
+            <th class="table-header text"><span>@Html.DisplayNameFor(model => model.IsHosted)</span></th>
             <th class="table-header text"><span>Action</span></th>
         </tr>
 
@@ -22,18 +22,18 @@
         {
             if (item.Status == "A")
             {
-                <tr ondblclick="location.href = '@Url.Action("Edit", "Customers", new { id = item.ID })'">
-                    <td class="text"><span>@Html.DisplayFor(modelItem => item.CompanyName)</span></td>
-                    <td class="text"><span>@Html.DisplayFor(modelItem => item.Phone)</span></td>
-                    <td class="text"><span>@Html.DisplayFor(modelItem => item.XceleratorURL)</span></td>
-                    <td class="text"><span>@Html.DisplayFor(modelItem => item.State)</span></td>
-                    <td class="text"><span>@Html.DisplayFor(modelItem => item.Country)</span></td>
-                    <td class="text">
-                        <span>
-                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-                        </span>
-                    </td>
-                </tr>
+        <tr ondblclick="location.href = '@Url.Action("Edit", "Customers", new { id = item.ID })'">
+            <td class="text"><span>@Html.DisplayFor(modelItem => item.CompanyName)</span></td>
+            <td class="text"><span>@Html.DisplayFor(modelItem => item.Phone)</span></td>
+            <td class="text"><span>@Html.DisplayFor(modelItem => item.State)</span></td>
+            <td class="text"><span>@Html.DisplayFor(modelItem => item.Country)</span></td>
+            <td class="text"><span>@Html.DisplayFor(modelItem => item.IsHosted)</span></td>
+            <td class="text">
+                <span>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </span>
+            </td>
+        </tr>
             }
         }
 
