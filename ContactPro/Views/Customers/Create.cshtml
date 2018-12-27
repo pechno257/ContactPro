@@ -25,7 +25,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
-                            @Html.LabelFor(model => model.CompanyName, htmlAttributes: new { @class = "control-label required-field" })
+                            @Html.LabelFor(model => model.CompanyName, htmlAttributes: new { @class = "control-label required-field text-nowrap" })
                         </div>
                         <div class="col-lg-9 col-md-8">
                             @Html.EditorFor(model => model.CompanyName, new { htmlAttributes = new { @class = "form-control form-control-sm", PlaceHolder = "ABC Company", autofocus = "autofocus" } })
@@ -37,7 +37,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
-                            @Html.LabelFor(model => model.XceleratorURL, htmlAttributes: new { @class = "control-label" })
+                            @Html.LabelFor(model => model.XceleratorURL, htmlAttributes: new { @class = "control-label text-nowrap" })
                         </div>
                         <div class="col-lg-9 col-md-8">
                             @Html.EditorFor(model => model.XceleratorURL, new { htmlAttributes = new { @class = "form-control form-control-sm", PlaceHolder = "https://www.domain.com" } })
@@ -51,7 +51,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
-                            @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label required-field" })
+                            @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label required-field text-nowrap" })
                         </div>
                         <div class="col-lg-9 col-md-8">
                             @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control form-control-sm", PlaceHolder = "555-555-5555" } })
@@ -63,7 +63,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
-                            @Html.LabelFor(model => model.Fax, htmlAttributes: new { @class = "control-label" })
+                            @Html.LabelFor(model => model.Fax, htmlAttributes: new { @class = "control-label text-nowrap" })
                         </div>
                         <div class="col-lg-9 col-md-8">
                             @Html.EditorFor(model => model.Fax, new { htmlAttributes = new { @class = "form-control form-control-sm", PlaceHolder = "555-555-5555" } })
@@ -85,7 +85,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
-                            @Html.LabelFor(model => model.Street, htmlAttributes: new { @class = "control-label" })
+                            @Html.LabelFor(model => model.Street, htmlAttributes: new { @class = "control-label text-nowrap" })
                         </div>
                         <div class="col-lg-9 col-md-8">
                             @Html.EditorFor(model => model.Street, new { htmlAttributes = new { @class = "form-control form-control-sm", PlaceHolder = "123 Main St" } })
@@ -97,7 +97,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
-                            @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label" })
+                            @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label text-nowrap" })
                         </div>
                         <div class="col-lg-9 col-md-8">
                             @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control form-control-sm", PlaceHolder = "New York" } })
@@ -109,7 +109,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
-                            @Html.LabelFor(model => model.State, htmlAttributes: new { @class = "control-label" })
+                            @Html.LabelFor(model => model.State, htmlAttributes: new { @class = "control-label text-nowrap" })
                         </div>
                         <div class="col-lg-9 col-md-8">
                             @Html.DropDownListFor(model => model.State, ContactPro.Utils.StateList.GetStateList(), "", new { @class = "form-control form-control-sm" })
@@ -121,7 +121,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
-                            @Html.LabelFor(model => model.Zip, htmlAttributes: new { @class = "control-label" })
+                            @Html.LabelFor(model => model.Zip, htmlAttributes: new { @class = "control-label text-nowrap" })
                         </div>
                         <div class="col-lg-9 col-md-8">
                             @Html.EditorFor(model => model.Zip, new { htmlAttributes = new { @class = "form-control form-control-sm", PlaceHolder = "90237 or 93023-7474 or A2Z 7G8" } })
@@ -133,7 +133,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
-                            @Html.LabelFor(model => model.Country, htmlAttributes: new { @class = "control-label required-field" })
+                            @Html.LabelFor(model => model.Country, htmlAttributes: new { @class = "control-label required-field text-nowrap" })
                         </div>
                         <div class="col-lg-9 col-md-8">
                             @Html.DropDownListFor(model => model.Country, ContactPro.Utils.CountryList.GetCountryList(), "", new { @class = "form-control form-control-sm" })
@@ -145,7 +145,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
-                            @Html.LabelFor(model => model.IsHosted, htmlAttributes: new { @class = "control-label required-field" })
+                            @Html.LabelFor(model => model.IsHosted, htmlAttributes: new { @class = "control-label required-field text-nowrap" })
                         </div>
                         <div class="col-lg-9 col-md-8">
                             @Html.DropDownListFor(model => model.IsHosted, ContactPro.Utils.IsHosted.GetIsHosted(), "", new { @class = "form-control form-control-sm", @id="dropdown1" })
@@ -171,7 +171,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
-                            @Html.LabelFor(model => model.MailStreet, htmlAttributes: new { @class = "control-label" })
+                            @Html.LabelFor(model => model.MailStreet, htmlAttributes: new { @class = "control-label text-nowrap" })
                         </div>
                         <div class="col-lg-9 col-md-8">
                             @Html.EditorFor(model => model.MailStreet, new { htmlAttributes = new { @class = "form-control form-control-sm", PlaceHolder = "123 Main St" } })
@@ -183,7 +183,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
-                            @Html.LabelFor(model => model.MailCity, htmlAttributes: new { @class = "control-label" })
+                            @Html.LabelFor(model => model.MailCity, htmlAttributes: new { @class = "control-label text-nowrap" })
                         </div>
                         <div class="col-lg-9 col-md-8">
                             @Html.EditorFor(model => model.MailCity, new { htmlAttributes = new { @class = "form-control form-control-sm", PlaceHolder = "New York" } })
@@ -195,7 +195,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
-                            @Html.LabelFor(model => model.MailState, htmlAttributes: new { @class = "control-label" })
+                            @Html.LabelFor(model => model.MailState, htmlAttributes: new { @class = "control-label text-nowrap" })
                         </div>
                         <div class="col-lg-9 col-md-8">
                             @Html.DropDownListFor(model => model.MailState, ContactPro.Utils.StateList.GetStateList(), "", new { @class = "form-control form-control-sm" })
@@ -207,7 +207,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
-                            @Html.LabelFor(model => model.MailZip, htmlAttributes: new { @class = "control-label" })
+                            @Html.LabelFor(model => model.MailZip, htmlAttributes: new { @class = "control-label text-nowrap" })
                         </div>
                         <div class="col-lg-9 col-md-8">
                             @Html.EditorFor(model => model.MailZip, new { htmlAttributes = new { @class = "form-control form-control-sm", PlaceHolder = "90237 or 93023-7474 or A2Z 7G8" } })
@@ -219,7 +219,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
-                            @Html.LabelFor(model => model.MailCountry, htmlAttributes: new { @class = "control-label" })
+                            @Html.LabelFor(model => model.MailCountry, htmlAttributes: new { @class = "control-label text-nowrap" })
                         </div>
                         <div class="col-lg-9 col-md-8">
                             @Html.DropDownListFor(model => model.MailCountry, ContactPro.Utils.CountryList.GetCountryList(), "", new { @class = "form-control form-control-sm" })
