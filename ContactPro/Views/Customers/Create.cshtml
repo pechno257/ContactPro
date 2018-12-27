@@ -145,7 +145,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
-                            @Html.LabelFor(model => model.IsHosted, htmlAttributes: new { @class = "control-label" })
+                            @Html.LabelFor(model => model.IsHosted, htmlAttributes: new { @class = "control-label required-field" })
                         </div>
                         <div class="col-lg-9 col-md-8">
                             @Html.DropDownListFor(model => model.IsHosted, ContactPro.Utils.IsHosted.GetIsHosted(), "", new { @class = "form-control form-control-sm", @id="dropdown1" })
