@@ -3,39 +3,58 @@
 @{
     ViewBag.Title = "Customers";
 }
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.semanticui.min.css" />
+
 <br />
 
 <p class="title-area text-center"><span class="custom-float-left">@ViewBag.Title</span>@Html.Partial("_CreateNewButtonPartial")</p>
 
 <div class="table-responsive">
-    <table class="table table-bordered table-hover table-sm table-striped">
-        <tr>
-            <th class="table-header text"><span>@Html.DisplayNameFor(model => model.CompanyName)</span></th>
-            <th class="table-header text"><span>@Html.DisplayNameFor(model => model.Phone)</span></th>
-            <th class="table-header text"><span>@Html.DisplayNameFor(model => model.State)</span></th>
-            <th class="table-header text"><span>@Html.DisplayNameFor(model => model.Country)</span></th>
-            <th class="table-header text"><span>@Html.DisplayNameFor(model => model.IsHosted)</span></th>
-            <th class="table-header text"><span>Action</span></th>
-        </tr>
+    <table id="myTable" class="table ui celled table-hover table-striped compact">
+        <thead>
+            <tr>
+                <th style="background: #333; color: white;"><span>@Html.DisplayNameFor(model => model.CompanyName)</span></th>
+                <th style="background: #333; color: white;"><span>@Html.DisplayNameFor(model => model.Phone)</span></th>
+                <th style="background: #333; color: white;"><span>@Html.DisplayNameFor(model => model.State)</span></th>
+                <th style="background: #333; color: white;"><span>@Html.DisplayNameFor(model => model.Country)</span></th>
+                <th style="background: #333; color: white;"><span>@Html.DisplayNameFor(model => model.IsHosted)</span></th>
+                <th style="background: #333; color: white;"><span>Action</span></th>
+            </tr>
+        </thead>
 
         @foreach (var item in Model)
         {
             if (item.Status == "A")
             {
-        <tr ondblclick="location.href = '@Url.Action("Edit", "Customers", new { id = item.ID })'">
-            <td class="text"><span>@Html.DisplayFor(modelItem => item.CompanyName)</span></td>
-            <td class="text"><span>@Html.DisplayFor(modelItem => item.Phone)</span></td>
-            <td class="text"><span>@Html.DisplayFor(modelItem => item.State)</span></td>
-            <td class="text"><span>@Html.DisplayFor(modelItem => item.Country)</span></td>
-            <td class="text"><span>@Html.DisplayFor(modelItem => item.IsHosted)</span></td>
-            <td class="text">
-                <span>
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-                </span>
-            </td>
-        </tr>
+                <tr ondblclick="location.href = '@Url.Action("Edit", "Customers", new { id = item.ID })'">
+                    <td class="text"><span>@Html.DisplayFor(modelItem => item.CompanyName)</span></td>
+                    <td class="text"><span>@Html.DisplayFor(modelItem => item.Phone)</span></td>
+                    <td class="text"><span>@Html.DisplayFor(modelItem => item.State)</span></td>
+                    <td class="text"><span>@Html.DisplayFor(modelItem => item.Country)</span></td>
+                    <td class="text"><span>@Html.DisplayFor(modelItem => item.IsHosted)</span></td>
+                    <td class="text">
+                        <span>
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                        </span>
+                    </td>
+                </tr>
             }
         }
 
     </table>
 </div>
+
+@section Scripts {
+    <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myTable").DataTable({
+                scrollY: '100vh',
+                scrollCollapse: true,
+                paging: true
+            });
+        });
+    </script>
+}

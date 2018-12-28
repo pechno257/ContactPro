@@ -3,20 +3,26 @@
 @{
     ViewBag.Title = "Contacts ";
 }
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.semanticui.min.css" />
+
 <br />
 
 <p class="title-area text-center"><span class="custom-float-left">@ViewBag.Title</span>@Html.Partial("_CreateNewButtonPartial")</p>
 
 <div class="table-responsive">
-    <table class="table table-bordered table-hover table-striped table-sm">
-        <tr>
-            <th class="table-header text"><span>@Html.DisplayNameFor(model => model.Customer.CompanyName)</span></th>
-            <th class="table-header text"><span>@Html.DisplayNameFor(model => model.FullName)</span></th>
-            <th class="table-header text d-none d-lg-table-cell"><span>@Html.DisplayNameFor(model => model.JobTitle)</span></th>
-            <th class="table-header text"><span>@Html.DisplayNameFor(model => model.Customer.Phone)</span></th>
-            <th class="table-header text"><span>@Html.DisplayNameFor(model => model.Mobile)</span></th>
-            <th class="table-header text"><span>Action</span></th>
-        </tr>
+    <table id="myTable" class="table ui celled table-hover table-striped compact">
+        <thead>
+            <tr>
+                <th style="background: #333; color: white;"><span>@Html.DisplayNameFor(model => model.Customer.CompanyName)</span></th>
+                <th style="background: #333; color: white;"><span>@Html.DisplayNameFor(model => model.FullName)</span></th>
+                <th style="background: #333; color: white;"><span>@Html.DisplayNameFor(model => model.JobTitle)</span></th>
+                <th style="background: #333; color: white;"><span>@Html.DisplayNameFor(model => model.Customer.Phone)</span></th>
+                <th style="background: #333; color: white;"><span>@Html.DisplayNameFor(model => model.Mobile)</span></th>
+                <th style="background: #333; color: white;"><span>Action</span></th>
+            </tr>
+        </thead>
 
         @foreach (var item in Model)
         {
@@ -39,3 +45,16 @@
 
     </table>
 </div>
+
+@section Scripts {
+    <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myTable").DataTable({
+                scrollY: '100vh',
+                scrollCollapse: true,
+                paging: true
+            });
+        });
+    </script>
+}
