@@ -85,6 +85,18 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
+                            @Html.LabelFor(model => model.Country, htmlAttributes: new { @class = "control-label required-field text-nowrap" })
+                        </div>
+                        <div class="col-lg-9 col-md-8">
+                            @Html.DropDownListFor(model => model.Country, ContactPro.Utils.CountryList.GetCountryList(), "", new { @class = "form-control form-control-sm", @id = "countrydrp" })
+                            @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4">
                             @Html.LabelFor(model => model.Street, htmlAttributes: new { @class = "control-label text-nowrap" })
                         </div>
                         <div class="col-lg-9 col-md-8">
@@ -109,10 +121,10 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
-                            @Html.LabelFor(model => model.State, htmlAttributes: new { @class = "control-label text-nowrap" })
+                            @Html.LabelFor(model => model.State, htmlAttributes: new { @class = "control-label text-nowrap", @id = "statelabel" })
                         </div>
                         <div class="col-lg-9 col-md-8">
-                            @Html.DropDownListFor(model => model.State, ContactPro.Utils.StateList.GetStateList(), "", new { @class = "form-control form-control-sm" })
+                            @Html.DropDownListFor(model => model.State, ContactPro.Utils.StateList.GetStateList(), "", new { @class = "form-control form-control-sm", @id = "statedrp" })
                             @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -133,11 +145,11 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
-                            @Html.LabelFor(model => model.Country, htmlAttributes: new { @class = "control-label required-field text-nowrap" })
+                            @Html.LabelFor(model => model.IsHosted, htmlAttributes: new { @class = "control-label required-field text-nowrap" })
                         </div>
                         <div class="col-lg-9 col-md-8">
-                            @Html.DropDownListFor(model => model.Country, ContactPro.Utils.CountryList.GetCountryList(), "", new { @class = "form-control form-control-sm" })
-                            @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
+                            @Html.DropDownListFor(model => model.IsHosted, ContactPro.Utils.IsHosted.GetIsHosted(), "", new { @class = "form-control form-control-sm", @id = "ishosteddrp" })
+                            @Html.ValidationMessageFor(model => model.IsHosted, "", new { @class = "text-danger" })
                         </div>
                     </div>
                 </div>
@@ -145,22 +157,10 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
-                            @Html.LabelFor(model => model.IsHosted, htmlAttributes: new { @class = "control-label required-field text-nowrap" })
+                            @Html.LabelFor(model => model.HostedServer, htmlAttributes: new { @class = "control-label required-field text-nowrap", @id = "hostedserverlabel" })
                         </div>
                         <div class="col-lg-9 col-md-8">
-                            @Html.DropDownListFor(model => model.IsHosted, ContactPro.Utils.IsHosted.GetIsHosted(), "", new { @class = "form-control form-control-sm", @id="dropdown1" })
-                            @Html.ValidationMessageFor(model => model.IsHosted, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group" id="dropdown2">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-4">
-                            @Html.LabelFor(model => model.HostedServer, htmlAttributes: new { @class = "control-label required-field text-nowrap" })
-                        </div>
-                        <div class="col-lg-9 col-md-8">
-                            @Html.DropDownListFor(model => model.HostedServer, ContactPro.Utils.HostedServerList.GetHostedServerList(), "", new { @class = "form-control form-control-sm" })
+                            @Html.DropDownListFor(model => model.HostedServer, ContactPro.Utils.HostedServerList.GetHostedServerList(), "", new { @class = "form-control form-control-sm", @id = "hostedserverdrp" })
                             @Html.ValidationMessageFor(model => model.HostedServer, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -168,6 +168,18 @@
             </div>
 
             <div class="col-md-5 offset-md-2 offset-lg-0">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4">
+                            @Html.LabelFor(model => model.MailCountry, htmlAttributes: new { @class = "control-label text-nowrap" })
+                        </div>
+                        <div class="col-lg-9 col-md-8">
+                            @Html.DropDownListFor(model => model.MailCountry, ContactPro.Utils.CountryList.GetCountryList(), "", new { @class = "form-control form-control-sm" })
+                            @Html.ValidationMessageFor(model => model.MailCountry, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <div class="row">
                         <div class="col-lg-3 col-md-4">
@@ -215,18 +227,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-4">
-                            @Html.LabelFor(model => model.MailCountry, htmlAttributes: new { @class = "control-label text-nowrap" })
-                        </div>
-                        <div class="col-lg-9 col-md-8">
-                            @Html.DropDownListFor(model => model.MailCountry, ContactPro.Utils.CountryList.GetCountryList(), "", new { @class = "form-control form-control-sm" })
-                            @Html.ValidationMessageFor(model => model.MailCountry, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -244,32 +244,59 @@
     @Scripts.Render("~/bundles/jqueryval")
     <script>
         $(document).ready(function () {
-
-            if ($("#dropdown1").val() == "Y") {
-                $("#dropdown2").show();
-                $("#dropdown2label").show();
+            if ($("#ishosteddrp").val() == "Y") {
+                $("#hostedserverdrp").show();
+                $("#hostedserverdrp").addClass("required");
+                $("#hostedserverlabel").show();
             }
             else {
-                $("#dropdown2").hide();
-                $("#dropdown2label").hide();
+                $("#hostedserverdrp").hide();
+                $("#hostedserverdrp option[value='']").attr('selected', true);
+                $("#hostedserverlabel").hide();
             }
 
 
-            $("#dropdown1").change(function () {
-
+            $("#ishosteddrp").change(function () {
                 if ($(this).val() == "Y") {
-                    $("#dropdown2").show();
-                    $("#dropdown2").addClass("required");
-                    $("#dropdown2label").show();
+                    $("#hostedserverdrp").show();
+                    $("#hostedserverdrp").addClass("required");
+                    $("#hostedserverlabel").show();
                 }
                 else {
-                    $("#dropdown2").hide();
-                    $("#dropdown2 option[value='']").attr('selected', true)
-                    $("#dropdown2label").hide();
+                    $("#hostedserverdrp").hide();
+                    $("#hostedserverdrp option[value='']").attr('selected', true);
+                    $("#hostedserverlabel").hide();
                 }
             });
+        });
+
+        $(document).ready(function () {
+            if ($("#countrydrp").val() == "JAM") {
+                $("#statedrp").hide();
+                $("#statedrp option[value='']").attr('selected', true);
+                $("#statedrp").removeClass("required");
+                $("#statelabel").hide();
+            }
+            else {
+                $("#statedrp").show();
+                $("#statedrp").addClass("required");
+                $("#statelabel").show();
+            }
+
+            $("#countrydrp").change(function () {
+                if ($(this).val() == "JAM") {
+                    $("#statedrp").hide();
+                    $("#statedrp option[val='']").attr('selected', true);
+                    $("#statedrp").removeClass("required");
+                    $("#statelabel").hide();
+                }
+                else {
+                    $("#statedrp").show();
+                    $("#statedrp").addClass("required");
+                    $("#statelabel").show();
+                }
+            })
         });
     </script>
 }
 
-    

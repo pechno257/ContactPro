@@ -45,6 +45,9 @@ namespace ContactPro.Models
         [Required(ErrorMessage ="{0} is required.")]
         public string Country { get; set; }
 
+        [Display(Name = "Mail Country")]
+        public string MailCountry { get; set; }
+
         [Display(Name = "Mail Street")]
         public string MailStreet { get; set; }
 
@@ -56,9 +59,6 @@ namespace ContactPro.Models
 
         [Display(Name = "Mail Zip")]
         public string MailZip { get; set; }
-
-        [Display(Name = "Mail Country")]
-        public string MailCountry { get; set; }
 
         public DateTime DateCreated { get; set; } = DateTime.Now;
 
