@@ -212,6 +212,10 @@
     <Compile Include="Migrations\App\201812260632025_AddedHostedProps.Designer.cs">
       <DependentUpon>201812260632025_AddedHostedProps.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\App\201901030525531_RemoveMailAddress.cs" />
+    <Compile Include="Migrations\App\201901030525531_RemoveMailAddress.Designer.cs">
+      <DependentUpon>201901030525531_RemoveMailAddress.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\App\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Contact.cs" />
@@ -373,6 +377,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\App\201812260632025_AddedHostedProps.resx">
       <DependentUpon>201812260632025_AddedHostedProps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\App\201901030525531_RemoveMailAddress.resx">
+      <DependentUpon>201901030525531_RemoveMailAddress.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

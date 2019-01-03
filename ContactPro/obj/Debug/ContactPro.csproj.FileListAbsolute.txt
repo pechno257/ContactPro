@@ -309,3 +309,4 @@ C:\Users\jean\source\repos\ContactPro\ContactPro\obj\Debug\ContactPro.csproj.Gen
 D:\projects\source\repos\ContactPro\ContactPro\obj\Debug\ContactPro.Migrations.App.InitialCreate.resources
 D:\projects\source\repos\ContactPro\ContactPro\obj\Debug\ContactPro.csproj.GenerateResource.cache
 D:\projects\source\repos\ContactPro\ContactPro\obj\Debug\ContactPro.Migrations.App.AddedHostedProps.resources
+D:\projects\source\repos\ContactPro\ContactPro\obj\Debug\ContactPro.Migrations.App.RemoveMailAddress.resources
