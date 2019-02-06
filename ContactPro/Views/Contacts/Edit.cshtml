@@ -21,7 +21,7 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-lg-3 col-md-4">
-                        @Html.LabelFor(model => model.CustomerID, "Company", htmlAttributes: new { @class = "control-label required-field" })
+                        @Html.LabelFor(model => model.CustomerID, "Company", htmlAttributes: new { @class = "control-label required-field text-nowrap" })
                     </div>
                     <div class="col-lg-9 col-md-8">
                         @Html.DropDownList("CustomerID", null, "", htmlAttributes: new { @class = "form-control form-control-sm", autofocus = "autofocus" })
@@ -35,7 +35,7 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-lg-3 col-md-4">
-                        @Html.LabelFor(model => model.JobTitle, htmlAttributes: new { @class = "control-label" })
+                        @Html.LabelFor(model => model.JobTitle, htmlAttributes: new { @class = "control-label text-nowrap" })
                     </div>
                     <div class="col-lg-9 col-md-8">
                         @Html.EditorFor(model => model.JobTitle, new { htmlAttributes = new { @class = "form-control form-control-sm" } })
@@ -51,7 +51,7 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-lg-3 col-md-4">
-                        @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label required-field" })
+                        @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label required-field text-nowrap" })
                     </div>
                     <div class="col-lg-9 col-md-8">
                         @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control form-control-sm" } })
@@ -65,7 +65,7 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-lg-3 col-md-4">
-                        @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label required-field" })
+                        @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label required-field text-nowrap" })
                     </div>
                     <div class="col-lg-9 col-md-8">
                         @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control form-control-sm" } })
@@ -81,7 +81,7 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-lg-3 col-md-4">
-                        @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label" })
+                        @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label text-nowrap" })
                     </div>
                     <div class="col-lg-9 col-md-8">
                         @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control form-control-sm", @disabled = "disabled" } })
@@ -95,7 +95,7 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-lg-3 col-md-4">
-                        @Html.LabelFor(model => model.DirectLine, htmlAttributes: new { @class = "control-label" })
+                        @Html.LabelFor(model => model.DirectLine, htmlAttributes: new { @class = "control-label text-nowrap" })
                     </div>
                     <div class="col-lg-9 col-md-8">
                         @Html.EditorFor(model => model.DirectLine, new { htmlAttributes = new { @class = "form-control form-control-sm" } })
@@ -111,7 +111,7 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-lg-3 col-md-4">
-                        @Html.LabelFor(model => model.Mobile, htmlAttributes: new { @class = "control-label" })
+                        @Html.LabelFor(model => model.Mobile, htmlAttributes: new { @class = "control-label text-nowrap" })
                     </div>
                     <div class="col-lg-9 col-md-8">
                         @Html.EditorFor(model => model.Mobile, new { htmlAttributes = new { @class = "form-control form-control-sm" } })
@@ -125,7 +125,7 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-lg-3 col-md-4">
-                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label required-field" })
+                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label required-field text-nowrap" })
                     </div>
                     <div class="col-lg-9 col-md-8">
                         @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control form-control-sm" } })
@@ -141,7 +141,7 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-lg-3 col-md-4">
-                        @Html.LabelFor(model => model.SpecInstr, htmlAttributes: new { @class = "control-label" })
+                        @Html.LabelFor(model => model.SpecInstr, htmlAttributes: new { @class = "control-label text-nowrap" })
                     </div>
                     <div class="col-lg-9 col-md-8">
                         @Html.TextAreaFor(model => model.SpecInstr, 3, 500, new { @class = "form-control form-control-sm" })

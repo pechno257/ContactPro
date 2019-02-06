@@ -16,7 +16,8 @@ namespace ContactPro.Utils
                 new SelectListItem() { Text="Web1", Value="Web1"},
                 new SelectListItem() { Text="Web3", Value="Web2"},
                 new SelectListItem() { Text="Web3", Value="Web3"},
-                new SelectListItem() { Text="Web4", Value="Web4"}
+                new SelectListItem() { Text="Web4", Value="Web4"},
+                new SelectListItem() { Text="Web5", Value="Web5"}
             };
             return HostedServers;
         }

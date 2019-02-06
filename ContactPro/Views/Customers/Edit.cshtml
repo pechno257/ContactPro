@@ -104,7 +104,7 @@
     <div class="form-group">
         <div class="row">
             <div class="col-md-2">
-                @Html.LabelFor(model => model.State, htmlAttributes: new { @class = "control-label text-nowrap", @id = "statelabel" })
+                @Html.LabelFor(model => model.State, htmlAttributes: new { @class = "control-label required-field text-nowrap", @id = "statelabel" })
             </div>
             <div class="col-md-10">
                 @Html.DropDownListFor(model => model.State, ContactPro.Utils.StateList.GetStateList(), "", new { @class = "form-control form-control-sm", @id = "statedrp" })
