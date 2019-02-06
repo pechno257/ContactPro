@@ -201,3 +201,6 @@ C:\Users\jean\source\repos\ContactPro\ContactPro\obj\Release\ContactPro.csproj.C
 C:\Users\jean\source\repos\ContactPro\ContactPro\obj\Release\ContactPro.csproj.CopyComplete
 C:\Users\jean\source\repos\ContactPro\ContactPro\obj\Release\ContactPro.dll
 C:\Users\jean\source\repos\ContactPro\ContactPro\obj\Release\ContactPro.pdb
+D:\projects\source\repos\ContactPro\ContactPro\obj\Release\ContactPro.Migrations.App.AddedHostedProps.resources
+D:\projects\source\repos\ContactPro\ContactPro\obj\Release\ContactPro.Migrations.App.RemoveMailAddress.resources
+D:\projects\source\repos\ContactPro\ContactPro\obj\Release\ContactPro.Migrations.App.AddSpecInst.resources

@@ -48,7 +48,7 @@ namespace ContactPro.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,CustomerID,JobTitle,FirstName,LastName,Phone,DirectLine,Mobile,Email")] Contact contact)
+        public ActionResult Create([Bind(Include = "ID,CustomerID,JobTitle,FirstName,LastName,Phone,DirectLine,Mobile,Email,SpecInst")] Contact contact)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +82,7 @@ namespace ContactPro.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,CustomerID,JobTitle,FirstName,LastName,Phone,DirectLine,Mobile,Email")] Contact contact)
+        public ActionResult Edit([Bind(Include = "ID,CustomerID,JobTitle,FirstName,LastName,Phone,DirectLine,Mobile,Email,SpecInstr")] Contact contact)
         {
             if (ModelState.IsValid)
             {

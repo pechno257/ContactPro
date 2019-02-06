@@ -19,6 +19,7 @@
                 <th style="background: #333; color: white;"><span>@Html.DisplayNameFor(model => model.FullName)</span></th>
                 <th style="background: #333; color: white;"><span>@Html.DisplayNameFor(model => model.JobTitle)</span></th>
                 <th style="background: #333; color: white;"><span>@Html.DisplayNameFor(model => model.Customer.Phone)</span></th>
+                <th style="background: #333; color: white;"><span>@Html.DisplayNameFor(model => model.DirectLine)</span></th>
                 <th style="background: #333; color: white;"><span>@Html.DisplayNameFor(model => model.Mobile)</span></th>
                 <th style="background: #333; color: white;"><span>Action</span></th>
             </tr>
@@ -28,18 +29,19 @@
         {
             if (item.Status == "A")
             {
-                <tr ondblclick="location.href = '@Url.Action("Edit", "Contacts", new { id = item.ID })'">
-                    <td class="text"><span>@Html.DisplayFor(modelItem => item.Customer.CompanyName)</span></td>
-                    <td class="text"><span>@Html.DisplayFor(modelItem => item.FullName)</span></td>
-                    <td class="text d-none d-lg-table-cell"><span>@Html.DisplayFor(modelItem => item.JobTitle)</span></td>
-                    <td class="text"><span>@Html.DisplayFor(modelItem => item.Customer.Phone)</span></td>
-                    <td class="text"><span>@Html.DisplayFor(modelItem => item.Mobile)</span></td>
-                    <td class="text">
-                        <span>
-                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-                        </span>
-                    </td>
-                </tr>
+        <tr ondblclick="location.href = '@Url.Action("Edit", "Contacts", new { id = item.ID })'">
+            <td class="text"><span>@Html.DisplayFor(modelItem => item.Customer.CompanyName)</span></td>
+            <td class="text"><span>@Html.DisplayFor(modelItem => item.FullName)</span></td>
+            <td class="text d-none d-lg-table-cell"><span>@Html.DisplayFor(modelItem => item.JobTitle)</span></td>
+            <td class="text"><span>@Html.DisplayFor(modelItem => item.Customer.Phone)</span></td>
+            <td class="text"><span>@Html.DisplayFor(modelItem => item.DirectLine)</span></td>
+            <td class="text"><span>@Html.DisplayFor(modelItem => item.Mobile)</span></td>
+            <td class="text">
+                <span>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </span>
+            </td>
+        </tr>
             }
         }
 

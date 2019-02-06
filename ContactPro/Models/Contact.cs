@@ -47,6 +47,9 @@ namespace ContactPro.Models
         [RegularExpression(@"^^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", ErrorMessage = "{0} address is not valid.")]
         public string Email { get; set; }
 
+        [Display(Name = "Special Instructions")]
+        public string SpecInstr { get; set; }
+
         public DateTime DateCreated { get; set; } = DateTime.Now;
 
         public DateTime DateModified { get; set; } = DateTime.Now;
