@@ -46,7 +46,7 @@ namespace ContactPro.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,CompanyName,Phone,Fax,XceleratorURL,Street,City,State,Zip,Country,MailStreet,MailCity,MailState,MailZip,MailCountry,IsHosted,HostedServer")] Customer customer)
+        public ActionResult Create([Bind(Include = "ID,CompanyName,XceleratorURL,Phone,Fax,Country,Street,City,State,Zip,IsHosted,HostedServer")] Customer customer)
         {
             if (ModelState.IsValid)
             {
@@ -78,12 +78,13 @@ namespace ContactPro.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,CompanyName,Phone,Fax,XceleratorURL,Street,City,State,Zip,Country,MailStreet,MailCity,MailState,MailZip,MailCountry,IsHosted,HostedServer")] Customer customer)
+        public ActionResult Edit([Bind(Include = "ID,CompanyName,XceleratorURL,Phone,Fax,Country,Street,City,State,Zip,IsHosted,HostedServer")] Customer customer)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(customer).State = EntityState.Modified;
                 db.Entry(customer).Property(c => c.DateCreated).IsModified = false;
+                db.Entry(customer).Property(c => c.UserCreated).IsModified = false;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

@@ -8,7 +8,7 @@ using System.Web;
 
 namespace ContactPro.Models
 {
-    public class Customer
+    public class Customer : BaseEntity
     {
         public int ID { get; set; }
 
@@ -44,10 +44,6 @@ namespace ContactPro.Models
 
         [Required(ErrorMessage ="{0} is required.")]
         public string Country { get; set; }
-
-        public DateTime DateCreated { get; set; } = DateTime.Now;
-
-        public DateTime DateModified { get; set; } = DateTime.Now;
 
         [Required(ErrorMessage = "Please select an option.")]
         [Display(Name = "Hosted?")]

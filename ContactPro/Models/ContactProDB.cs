@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 
 namespace ContactPro.Models
@@ -23,5 +24,45 @@ namespace ContactPro.Models
         public DbSet<Contact> Contacts { get; set; }
 
         public DbSet<Customer> Customers { get; set; }
+
+        public override int SaveChanges()
+        {
+            AddTimestamps();
+            return base.SaveChanges();
+        }
+
+        public override async Task<int> SaveChangesAsync()
+        {
+            AddTimestamps();
+            return await base.SaveChangesAsync();
+        }
+
+        private void AddTimestamps()
+        {
+            var entities = ChangeTracker.Entries().Where(x => x.Entity is BaseEntity && (x.State == EntityState.Added || x.State == EntityState.Modified));
+
+            var currentUserName = !string.IsNullOrEmpty(System.Web.HttpContext.Current?.User?.Identity.Name)
+                ? HttpContext.Current.User.Identity.Name
+                : "Anonymous";
+
+            foreach (var entity in entities)
+            {
+                if (entity.State == EntityState.Added)
+                {
+                    ((BaseEntity)entity.Entity).DateCreated = DateTime.Now;
+                    ((BaseEntity)entity.Entity).UserCreated = currentUserName;
+                    ((BaseEntity)entity.Entity).DateModified = null;
+                    ((BaseEntity)entity.Entity).UserModified = null;
+                }
+                else if (entity.State == EntityState.Modified)
+                {
+                    ((BaseEntity)entity.Entity).DateModified = DateTime.Now;
+                    ((BaseEntity)entity.Entity).UserModified = currentUserName;
+                }
+                    
+                // ((BaseEntity)entity.Entity).DateModified = DateTime.Now;
+                // ((BaseEntity)entity.Entity).UserModified = currentUserName;
+            }
+        }
     }
 }
