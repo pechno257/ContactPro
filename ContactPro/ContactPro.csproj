@@ -224,6 +224,14 @@
     <Compile Include="Migrations\App\201902070323398_a.Designer.cs">
       <DependentUpon>201902070323398_a.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\App\201902141518192_UpdatedDBFieldName.cs" />
+    <Compile Include="Migrations\App\201902141518192_UpdatedDBFieldName.Designer.cs">
+      <DependentUpon>201902141518192_UpdatedDBFieldName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\App\201902141525376_AddedAuditToContacts.cs" />
+    <Compile Include="Migrations\App\201902141525376_AddedAuditToContacts.Designer.cs">
+      <DependentUpon>201902141525376_AddedAuditToContacts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\App\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BaseEntity.cs" />
@@ -395,6 +403,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\App\201902070323398_a.resx">
       <DependentUpon>201902070323398_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\App\201902141518192_UpdatedDBFieldName.resx">
+      <DependentUpon>201902141518192_UpdatedDBFieldName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\App\201902141525376_AddedAuditToContacts.resx">
+      <DependentUpon>201902141525376_AddedAuditToContacts.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

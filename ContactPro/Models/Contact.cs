@@ -8,7 +8,7 @@ using System.Web;
 
 namespace ContactPro.Models
 {
-    public class Contact
+    public class Contact : BaseEntity
     {
         public int ID { get; set; }
 
@@ -49,10 +49,6 @@ namespace ContactPro.Models
 
         [Display(Name = "Special Instructions")]
         public string SpecInstr { get; set; }
-
-        public DateTime DateCreated { get; set; } = DateTime.Now;
-
-        public DateTime DateModified { get; set; } = DateTime.Now;
 
         public Customer Customer { get; set; }
     }

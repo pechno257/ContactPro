@@ -83,8 +83,8 @@ namespace ContactPro.Controllers
             if (ModelState.IsValid)
             {
                 db.Entry(customer).State = EntityState.Modified;
-                db.Entry(customer).Property(c => c.DateCreated).IsModified = false;
-                db.Entry(customer).Property(c => c.UserCreated).IsModified = false;
+                db.Entry(customer).Property(c => c.DateAdded).IsModified = false;
+                db.Entry(customer).Property(c => c.AddedBy).IsModified = false;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

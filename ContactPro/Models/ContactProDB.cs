@@ -49,15 +49,15 @@ namespace ContactPro.Models
             {
                 if (entity.State == EntityState.Added)
                 {
-                    ((BaseEntity)entity.Entity).DateCreated = DateTime.Now;
-                    ((BaseEntity)entity.Entity).UserCreated = currentUserName;
-                    ((BaseEntity)entity.Entity).DateModified = null;
-                    ((BaseEntity)entity.Entity).UserModified = null;
+                    ((BaseEntity)entity.Entity).DateAdded = DateTime.Now;
+                    ((BaseEntity)entity.Entity).AddedBy = currentUserName;
+                    ((BaseEntity)entity.Entity).LastModified = null;
+                    ((BaseEntity)entity.Entity).LastModifiedBy = null;
                 }
                 else if (entity.State == EntityState.Modified)
                 {
-                    ((BaseEntity)entity.Entity).DateModified = DateTime.Now;
-                    ((BaseEntity)entity.Entity).UserModified = currentUserName;
+                    ((BaseEntity)entity.Entity).LastModified= DateTime.Now;
+                    ((BaseEntity)entity.Entity).LastModifiedBy = currentUserName;
                 }
                     
                 // ((BaseEntity)entity.Entity).DateModified = DateTime.Now;
